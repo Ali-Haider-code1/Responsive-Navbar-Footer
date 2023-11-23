@@ -1,38 +1,244 @@
-.App {
-  text-align: center;
+/* Navbar.css */
+body {
+  background-color: lightgrey;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 10px;
+  background-color: #fbfbfb;
+  color: black;
+  border-bottom: 1px solid grey;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.logo {
+  font-size: 1.5rem;
+  margin-left: 30px;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.header {
+  font-size: 1.2rem;
+  border-radius: 25px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid lightgray;
+  margin-left: 120px;
+}
+
+.menu {
+  font-size: 15px;
+
+}
+
+.menu button {
+  padding: 5px 15px;
+  margin: 0px 6px;
+}
+
+.border1{
+  border-right: 1px solid black;
+  font-weight: bolder;
+}
+
+.menu button:hover {
+
+  background-color: #da1f26;
+  border-radius: 25px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.menu button:nth-child(3) {
+  border-right: none !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.user-icons {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  background-color: transparent;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+.profile {
+  border-radius: 25px;
+  box-shadow: 10px 10px 10px #d7d7d7;
+  border: 1px solid lightgray;
+  padding: 10px;
+  margin-right: 40px;
+}
+
+.profile .toggle {
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.search-icon {
+  border-radius: 25px;
+  color: white;
+  background-color: #da1f26;
+  margin: 0px 5px;
+}
+
+.yourhome {
+  padding: 5px;
+}
+
+.yourhome:hover {
+  border-radius: 25px;
+  transition: background-color 0.7s;
+  background-color: rgb(211, 211, 211, 0.4);
+}
+.yourhome .dream{
+  color: #da1f26;
+  font-weight: 600;
+}
+
+.dropdown {
+  position: absolute;
+  right: 35px;
+  top: 70px;
+  width: 250px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.dropdown .registration {
+  border-bottom: 1px solid grey;
+  border-top: 1px solid grey;
+}
+
+.dropdown p {
+  padding: 5px 15px;
+}
+
+.dropdown p:hover {
+  background-color: rgb(211, 211, 211, 0.2);
+  cursor: pointer;
+
+}
+
+.dropdown p span {
+  background-color: #ff385c;
+  color: white;
+  border-radius: 5px;
+  margin: 2px;
+  padding: 2px 3px;
+}
+
+
+/* Footer Css */
+.footer {
+  padding: 40px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  background-color: #fff;
+  color: #222;
+  font-size: 14px;
+  line-height: 1.43;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col {
+  flex: 1;
+  padding: 10px;
+}
+
+.additional-div {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+
+.additional-div .copyrightline{
+  display: flex;
+  list-style: none;
+
+}
+.copyrightline li{
+  font-size: 0.875rem !important;
+  font-weight: 400;
+  padding: 0px 7px;
+}
+
+
+.icon{
+  width: 20px;
+  margin: -5px 10px 0px 0px;
+  padding: 2px;
+  font-size: 20px;
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+}
+.icon:hover{
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.footer p:hover{
+  text-decoration: underline;
+  cursor: pointer;
+
+}
+.footer .fsection:hover{
+  cursor: default;
+
+}
+
+
+
+@media (max-width:760px) {
+  .logo {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .navbar {
+    display: block;
   }
+
+  .header {
+    margin: 0px;
+  }
+
+  .user-icons {
+    margin: 15px 0px 0px 0px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .additional-div{
+    display: block;
+  }
+  .copyrightline span{
+    display: block;
+  }
+
 }
